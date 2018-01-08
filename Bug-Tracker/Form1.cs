@@ -37,12 +37,12 @@ namespace Bug_Tracker
         {
             try
             {
-                objConnect = new DatabaseConnection();
-                conString = Properties.Settings.Default.EmployeesConnectionString;
+                 objConnect = new DatabaseConnection();
+                 conString = Properties.Settings.Default.EmployeesConnectionString;
 
-                objConnect.connection_string = conString;
-                objConnect.Sql = Properties.Settings.Default.SQL;
-
+                 objConnect.connection_string = conString;
+                 objConnect.Sql = Properties.Settings.Default.SQL;
+                                
                 ds = objConnect.GetConnection;
                 MaxRows = ds.Tables[0].Rows.Count;
 

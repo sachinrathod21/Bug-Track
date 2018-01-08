@@ -72,7 +72,7 @@ namespace Bug_Tracker
         /// <summary>
         /// This will load the tables, and display them in a datagrid view
         /// </summary>
-
+  
         public void LoadTable()
         {
             conString = Properties.Settings.Default.EmployeesConnectionString;
@@ -235,9 +235,12 @@ namespace Bug_Tracker
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
-            dataGridView1.CurrentCell = this.dataGridView1[2, inc];
-            dataGridView1.Columns["id"].Visible = false;
+            dataGridView1 = new DataGridView();//Create new grid
+
+            dataGridView1.Columns["id"].Visible = false;// refer to column which is not there 
             dataGridView1.Columns["userid"].Visible = false;
+            dataGridView1.ColumnCount = 5;
+
             projectid = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
             loadbugsummry();
         }

@@ -18,6 +18,8 @@ namespace Bug_Tracker
         //Declaring variables
         MainMenu Userspops;
         string conString;
+        SqlConnection mySqlConnection;
+
 
         public Login()
         {
@@ -67,11 +69,12 @@ namespace Bug_Tracker
         public bool login()
         {
             conString = Properties.Settings.Default.EmployeesConnectionString;
-
             SqlConnection conn = new SqlConnection(conString);
             SqlDataAdapter sdaa = new SqlDataAdapter("Select first_name,Id from tbl_employees Where username='" + textBox2.Text + "' and password='" + textBox1.Text + "'", conn);
             DataTable dt = new System.Data.DataTable();
             sdaa.Fill(dt);
+
+
 
             if (dt.Rows.Count == 1)
             {

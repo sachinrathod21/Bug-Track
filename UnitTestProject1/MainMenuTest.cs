@@ -19,10 +19,10 @@ namespace BugsTests
         [TestMethod]
         public void Project_bugsummry_pass()
         {
-            MainMenu form = new MainMenu("Sachin", "2");
+            MainMenu form = new MainMenu("Deepanjan", "2");
             int actual;
             int expected;
-
+            
             form.projectid = 9;
             form.loadbugsummry();
             actual = form.MaxRows;
@@ -38,7 +38,7 @@ namespace BugsTests
         [TestMethod]
         public void Project_bugsummry_fail()
         {
-            MainMenu form = new MainMenu("Sachin", "2");
+            MainMenu form = new MainMenu("Deepanjan", "2");
             int actual;
             int expected;
 
@@ -57,7 +57,7 @@ namespace BugsTests
         [TestMethod]
         public void MainMenu_table_load()
         {
-            MainMenu form = new MainMenu("Sachin", "2");
+            MainMenu form = new MainMenu("Deepanjan", "2");
             int actual;
             int expected;
 
@@ -75,7 +75,7 @@ namespace BugsTests
         [TestMethod]
         public void Project_insert_fail()
         {
-            MainMenu form = new MainMenu("Sachin", "2");
+            MainMenu form = new MainMenu("Deepanjan", "2");
             bool actual;
             bool expected;
             form.textBox2.Text = "";
@@ -95,7 +95,7 @@ namespace BugsTests
         [TestMethod]
         public void Project_insert_pass()
         {
-            MainMenu form = new MainMenu("Sachin", "2");
+            MainMenu form = new MainMenu("Deepanjan", "2");
             bool actual;
             bool expected;
             form.textBox2.Text = "2";
@@ -111,3 +111,4 @@ namespace BugsTests
 
     }
 }
+

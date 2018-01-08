@@ -37,11 +37,6 @@ namespace Bug_Tracker
             label2.Text = dataTable.Rows.Count.ToString();
             rowcount = dataTable.Rows.Count;
         }
-
-        private void buglogs_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 
 

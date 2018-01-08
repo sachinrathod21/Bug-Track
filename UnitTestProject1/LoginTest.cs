@@ -7,7 +7,7 @@ namespace BugsTests
     public class LoginTest
     {
         /// <summary>
-        ///should pass because to there are login details with the username dp, and Password dp
+        ///should pass because to there are login details with the username sr, and Password sr
         /// </summary>
         [TestMethod]
         public void login_test_pass()
@@ -16,8 +16,8 @@ namespace BugsTests
             bool actual;
             bool expected;
 
-            form.textBox2.Text = "dp";
-            form.textBox1.Text = "dp";
+            form.textBox2.Text = "sr";
+            form.textBox1.Text = "sr";
             actual = form.login();
             expected = true;
 

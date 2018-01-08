@@ -54,4 +54,3 @@ namespace Bug_Tracker
         }
     }
 }
-
